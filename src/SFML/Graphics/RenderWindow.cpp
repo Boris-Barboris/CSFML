@@ -349,6 +349,17 @@ void sfRenderWindow_setView(sfRenderWindow* renderWindow, const sfView* view)
     renderWindow->CurrentView.This = view->This;
 }
 
+void sfRenderWindow_setScissor(sfRenderWindow* renderWindow, sfIntRect rect)
+{
+    sf::IntRect sfml_rect(rect.left, rect.top, rect.width, rect.height);
+    CSFML_CALL(renderWindow, setScissor(sfml_rect));
+}
+
+void sfRenderWindow_setScissorTest(sfRenderWindow* renderWindow, sfBool enabled)
+{
+    bool sf_enabled = static_cast<bool>(enabled);
+    CSFML_CALL(renderWindow, setScissorTest(sf_enabled));
+}
 
 ////////////////////////////////////////////////////////////
 const sfView* sfRenderWindow_getView(const sfRenderWindow* renderWindow)

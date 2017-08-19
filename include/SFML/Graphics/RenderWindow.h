@@ -343,6 +343,10 @@ CSFML_GRAPHICS_API void sfRenderWindow_clear(sfRenderWindow* renderWindow, sfCol
 ////////////////////////////////////////////////////////////
 CSFML_GRAPHICS_API void sfRenderWindow_setView(sfRenderWindow* renderWindow, const sfView* view);
 
+CSFML_GRAPHICS_API void sfRenderWindow_setScissor(sfRenderWindow* renderWindow, sfIntRect rect);
+
+CSFML_GRAPHICS_API void sfRenderWindow_setScissorTest(sfRenderWindow* renderWindow, sfBool enabled);
+
 ////////////////////////////////////////////////////////////
 /// \brief Get the current active view of a render window
 ///
