@@ -305,7 +305,7 @@ void sfShader_setTextureUniform(sfShader* shader, const char* name, const sfText
 ////////////////////////////////////////////////////////////
 void sfShader_setCurrentTextureUniform(sfShader* shader, const char* name)
 {
-	CSFML_CALL(shader, setUniform(name, sf::Shader::CurrentTexture));
+	//CSFML_CALL(shader, setUniform(name, sf::Shader::CurrentTexture));
 }
 
 
@@ -418,7 +418,7 @@ void sfShader_setTextureParameter(sfShader* shader, const char* name, const sfTe
 ////////////////////////////////////////////////////////////
 void sfShader_setCurrentTextureParameter(sfShader* shader, const char* name)
 {
-	CSFML_CALL(shader, setParameter(name, sf::Shader::CurrentTexture));
+	//CSFML_CALL(shader, setParameter(name, sf::Shader::CurrentTexture));
 }
 
 
